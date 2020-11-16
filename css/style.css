@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+body {
+  font-family: font-family;
+  font-weight: 300;
+  color: #7887ab; }
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content); }
+
+.sidebar {
+  background-color: yellow; }
+
+.header {
+  background-color: red; }
+
+.top-cars {
+  background-color: green; }
+
+.features {
+  background-color: orange; }
+
+.story__pictures {
+  background-color: #0b58b1; }
+
+.story__content {
+  background-color: #660bb1; }
+
+.homes {
+  background-color: #b1850b; }
+
+.gallery {
+  background-color: #ca11ab; }
+
+.footer {
+  background-color: rgba(51, 221, 221, 0.63); }

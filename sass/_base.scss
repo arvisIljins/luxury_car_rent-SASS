@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+//Variables
+$font-family: "Quicksand", sans-serif;
+$dark-font-color: #061539;
+$medium-font-color: #162955;
+$medium-text-color: #4f628e;
+$light-text-color: #7887ab;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: font-family;
+  font-weight: 300;
+  color: $light-text-color;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content); //row sizes
+  g
