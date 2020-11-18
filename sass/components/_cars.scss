@@ -1,0 +1,67 @@
+.cars {
+  background-color: $medium-font-color;
+  grid-column: center-starts / center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem;
+}
+
+.car {
+  color: $medium-font-color;
+  background-color: $medium-text-color;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  &__img {
+    width: 100%;
+    grid-row: 1 /2;
+    grid-column: 1 / -1;
+    opacity: 0.5;
+    transition: ease-in-out 0.5s;
+  }
+  &__img:hover {
+    opacity: 1;
+  }
+
+  &__star {
+    grid-row: 1 /2;
+    grid-column: 2 /3;
+    color: $light-text-color;
+    font-size: 2.5rem;
+    justify-self: end;
+    margin: 1rem;
+    transition: ease-in-out 0.5s;
+  }
+  &__star:hover {
+    color: yellow;
+    transform: scale(1.1);
+  }
+  &__name {
+    grid-column: 1 / -1;
+    font-size: 2rem;
+    color: $medium-text-color;
+    background-color: $medium-font-color;
+    margin: 0 2rem;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    justify-self: center;
+    z-index: 2;
+  }
+  &__details {
+    justify-self: start;
+    font-size: 1.5rem;
+    display: flex;
+    padding: 1rem;
+
+    i {
+      padding-left: 2rem;
+    }
+    p {
+      padding-left: 1rem;
+    }
+  }
+  &__btn {
+    grid-column: 1 / -1;
+  }
+}

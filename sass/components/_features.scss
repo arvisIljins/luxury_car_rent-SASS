@@ -1,3 +1,27 @@
 .features {
-  background-color: orange;
+  margin: 15rem 0;
+  grid-column: center-starts / center-end;
+  display: grid;
+  //grid-template-columns: repeat(3, 1fr);
+  //responsive grid
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+  background-color: $medium-font-color;
+  align-items: start;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-gap: 1.5rem;
+  &__icon {
+    font-size: 3rem;
+    color: $medium-text-color;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    text-align: center;
+    grid-column: 1 /-1;
+  }
 }

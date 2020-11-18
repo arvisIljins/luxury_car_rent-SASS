@@ -1,8 +1,59 @@
 .story {
   &__pictures {
-    background-color: rgb(11, 88, 177);
+    background-image: linear-gradient(
+        rgba($dark-font-color, 0.2),
+        rgba($dark-font-color, 0.2)
+      ),
+      url("../img/image3.jpg");
+    grid-column: full-start / col-end 4;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+  }
+
+  &__img--1 {
+    width: 115%;
+    height: auto;
+    grid-row: 1 / 4;
+    grid-column: 3 / 7;
+    z-index: 2;
+    box-shadow: 0.5rem 0.1rem 2rem $light-text-color;
+    transition: 0.5s ease-in-out;
+  }
+  &__img--1:hover {
+    transform: scale(1.1);
+    z-index: 3;
+  }
+  &__img--2 {
+    width: 115%;
+    height: auto;
+    grid-row: 4 / 6;
+    grid-column: 4 / 7;
+    z-index: 2;
+    box-shadow: 0.5rem 0.1rem 2rem $light-text-color;
+    transition: 0.5s ease-in-out;
+  }
+  &__img--2:hover {
+    transform: scale(1.1);
   }
   &__content {
-    background-color: rgb(102, 11, 177);
+    background-color: $dark-font-color;
+    grid-column: col-end 4 / full-end;
+    padding: 6rem 8vw;
+    //flex
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;*/
+    //Grid
+    display: grid;
+    align-content: center;
+    justify-items: start;
+  }
+  &__text {
+    font-size: 1.8rem;
   }
 }
