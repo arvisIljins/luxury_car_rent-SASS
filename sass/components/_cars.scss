@@ -12,6 +12,8 @@
   background-color: $medium-text-color;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  transition: ease-in-out 0.5s;
+
   &__img {
     width: 100%;
     grid-row: 1 /2;
@@ -64,4 +66,9 @@
   &__btn {
     grid-column: 1 / -1;
   }
+}
+
+.car:hover {
+  transform: scale(1.1);
+  box-shadow: 0.5rem 0.1rem 2rem $light-text-color;
 }

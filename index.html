@@ -9,6 +9,7 @@
     ></script>
     <title>Luxury Car rent</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
   </head>
   <body class="container">
     <div class="sidebar">sidebar</div>
@@ -67,8 +68,18 @@
       </div>
     </section>
     <div class="story__pictures">
-      <img src="img/image1.jpg" alt="car" class="story__img--1" />
-      <img src="img/image2.jpg" alt="car" class="story__img--2" />
+      <img
+        onclick="myFunction(this);"
+        src="img/image1.jpg"
+        alt="car"
+        class="story__img--1"
+      />
+      <img
+        onclick="myFunction(this);"
+        src="img/image2.jpg"
+        alt="car"
+        class="story__img--2"
+      />
     </div>
     <div class="story__content">
       <h3 class="heading-3">Best moments</h3>
@@ -232,7 +243,132 @@
         <button class="btn-primary car__btn">Book Now</button>
       </div>
     </section>
-    <section class="gallery">gallery</section>
-    <footer class="footer">Footer</footer>
+    <section class="gallery">
+      <figure class="gallery__item gallery__item--1">
+        <img
+          onclick="myFunction(this);"
+          src="img/galery/image1.jpg"
+          alt="image"
+          class="gallery__img"
+        />
+      </figure>
+      <figure class="gallery__item gallery__item--2">
+        <img
+          onclick="myFunction(this);"
+          src="img/galery/image2.jpg"
+          alt="image"
+          class="gallery__img"
+        />
+      </figure>
+      <figure class="gallery__item gallery__item--3">
+        <img
+          onclick="myFunction(this);"
+          src="img/galery/image3.jpg"
+          alt="image"
+          class="gallery__img"
+        />
+      </figure>
+      <figure class="gallery__item gallery__item--4">
+        <img
+          onclick="myFunction(this);"
+          src="img/galery/image4.jpg"
+          alt="image"
+          class="gallery__img"
+        />
+      </figure>
+      <figure class="gallery__item gallery__item--5">
+        <img
+          onclick="myFunction(this);"
+          src="img/galery/image5.jpg"
+          alt="image"
+          class="gallery__img"
+        />
+      </figure>
+      <figure class="gallery__item gallery__item--6">
+        <img
+          onclick="myFunction(this);"
+          src="img/galery/image6.jpg"
+          alt="image"
+          class="gallery__img"
+        />
+      </figure>
+      <figure class="gallery__item gallery__item--8">
+        <img
+          onclick="myFunction(this);"
+          src="img/galery/image8.jpg"
+          alt="image"
+          class="gallery__img"
+        />
+      </figure>
+      <figure class="gallery__item gallery__item--9">
+        <img
+          onclick="myFunction(this);"
+          src="img/galery/image9.jpg"
+          alt="image"
+          class="gallery__img"
+        />
+      </figure>
+      <figure class="gallery__item gallery__item--10">
+        <img
+          onclick="myFunction(this);"
+          src="img/galery/image10.jpg"
+          alt="image"
+          class="gallery__img"
+        />
+      </figure>
+      <figure class="gallery__item gallery__item--11">
+        <img
+          onclick="myFunction(this);"
+          src="img/galery/image11.jpg"
+          alt="image"
+          class="gallery__img"
+        />
+      </figure>
+      <figure class="gallery__item gallery__item--12">
+        <img
+          onclick="myFunction(this);"
+          src="img/galery/image12.jpg"
+          alt="image"
+          class="gallery__img"
+        />
+      </figure>
+      <figure class="gallery__item gallery__item--13">
+        <img
+          onclick="myFunction(this);"
+          src="img/galery/image13.jpg"
+          alt="image"
+          class="gallery__img"
+        />
+      </figure>
+      <figure class="gallery__item gallery__item--14">
+        <img
+          onclick="myFunction(this);"
+          src="img/galery/image14.jpg"
+          alt="image"
+          class="gallery__img"
+        />
+      </figure>
+    </section>
+    <footer class="footer">
+      <ul class="nav">
+        <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Testamental</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Car list</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Gallery</a></li>
+        <li class="nav__item"><a href="#" class="nav__link">Book Now</a></li>
+      </ul>
+      <p class="footer__legal">
+        Copyright &#64; 2020 All Rights Reserved By yourgurunet.com
+      </p>
+    </footer>
+
+    <!--Gallery modal------------------------------------------->
+    <div id="galleryModal" class="modal">
+      <div class="modal__image--container">
+        <span class="modal__close">&times;</span>
+        <img class="modal__content" id="expandedImg" />
+      </div>
+    </div>
   </body>
 </html>

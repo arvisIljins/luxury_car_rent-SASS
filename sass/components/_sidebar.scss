@@ -1,5 +1,7 @@
 .sidebar {
-  background-color: yellow;
+  background-color: $medium-text-color;
+  box-shadow: 0.1rem 0.1rem 1rem $light-text-color;
+  z-index: 4;
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1; //start from 1 end as last
 }

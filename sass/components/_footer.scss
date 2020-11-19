@@ -1,4 +1,35 @@
 .footer {
-  background-color: rgba(51, 221, 221, 0.63);
+  background-color: $medium-font-color;
   grid-column: full-start / full-end;
+  padding: 8rem;
+  &__legal {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+.nav {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 15rem);
+  grid-gap: 3rem;
+  justify-items: center;
+  &__item {
+    list-style: none;
+    margin: 4rem 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $light-text-color;
+    background-color: $dark-font-color;
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    display: block;
+    transition: 0.5s all;
+  }
+  &__link:hover {
+    transform: scale(1.1) translateY(-0.5rem);
+    outline: none;
+  }
 }
