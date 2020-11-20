@@ -6,6 +6,9 @@
   grid-template-rows: repeat(7, 5vw);
   grid-gap: 1.5rem;
   padding: 1.5rem;
+  @media screen and (max-width: 43.75em) {
+    grid-gap: 0.5rem;
+  }
 
   &__item {
     &--1 {

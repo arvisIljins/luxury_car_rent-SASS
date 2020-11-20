@@ -4,6 +4,12 @@
   z-index: 4;
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1; //start from 1 end as last
+
+  @media screen and (max-width: 56.25em) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    z-index: 99;
+  }
 }
 
 .sidebar__container {
@@ -11,6 +17,11 @@
   width: 8rem;
   height: 80vh;
   position: fixed;
+  @media screen and (max-width: 56.25em) {
+    width: 100vw;
+    height: 8rem;
+    box-shadow: 0.1rem 0.1rem 1rem $light-text-color;
+  }
 }
 
 /*Open icon*/
@@ -23,6 +34,10 @@
   background-color: $dark-font-color;
   display: block;
   z-index: 99;
+  @media screen and (max-width: 56.25em) {
+    float: right;
+    margin: 4rem 4rem;
+  }
 }
 
 .navigation__icon::before,
@@ -153,5 +168,15 @@
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+@media screen and (max-width: 56.25em) {
+  @keyframes showNavigation {
+    0% {
+      height: 8rem;
+    }
+    100% {
+      height: 100%;
+    }
   }
 }

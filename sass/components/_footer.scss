@@ -13,6 +13,9 @@
   grid-template-columns: repeat(auto-fit, 15rem);
   grid-gap: 3rem;
   justify-items: center;
+  @media screen and (max-width: 43.75em) {
+    grid-gap: 0;
+  }
   &__item {
     list-style: none;
     margin: 4rem 0;

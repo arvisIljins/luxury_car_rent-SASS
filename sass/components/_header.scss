@@ -9,12 +9,17 @@
   background-position: center;
   background-size: cover;
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr;
-  grid-template-columns: max-content;
+  grid-template-rows: 1fr min-content minmax(min-content, 6rem) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   padding: 8rem;
   padding-top: 4rem;
   justify-content: center;
+
+  @media screen and (max-width: 56.25em) {
+    grid-column: full-start / full-end;
+  }
+
   h1 {
     color: $light-text-color;
   }
@@ -51,7 +56,8 @@
     justify-items: center;
     grid-template-columns: repeat(4, 1fr);
     img {
-      height: 6rem;
+      max-height: 6rem;
+      max-width: 100%;
       opacity: 0.8;
     }
   }

@@ -4,6 +4,13 @@
   display: grid;
   grid-template-rows: 50%;
   overflow: hidden;
+  @media screen and (max-width: 56.25em) {
+    grid-column: full-start / full-end;
+    display: flex;
+  }
+  @media screen and (max-width: 43.75em) {
+    display: none;
+  }
 }
 .top__cars--container {
   width: 100%;

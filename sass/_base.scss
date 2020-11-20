@@ -7,6 +7,14 @@ $medium-font-color: #162955;
 $medium-text-color: #4f628e;
 $light-text-color: #7887ab;
 
+/*Media query's converted to em*/
+/* Xpx / 16 = em
+ 75em - 1200px
+/68.75em - 1100px
+56.25em - 900px
+43.75em - 700px
+*/
+
 *,
 *::before,
 *::after {
@@ -18,6 +26,9 @@ $light-text-color: #7887ab;
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  @media screen and (max-width: 75em) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -35,6 +46,32 @@ body {
     [center-starts] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end]
     minmax(6rem, 1fr) [full-end];
+
+  @media screen and (max-width: 56.25em) {
+    grid-template-rows: 8rem 80vh 30vh min-content 40vw repeat(3, min-content); //row sizes
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-starts] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [center-end]
+      minmax(6rem, 1fr) [full-end];
+  }
+  @media screen and (max-width: 43.75em) {
+    grid-template-rows: 8rem calc(100vh - 8rem) min-content 90vw repeat(
+        3,
+        min-content
+      ); //row sizes
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-starts] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [center-end]
+      minmax(6rem, 1fr) [full-end];
+  }
 }
 
 // Typography

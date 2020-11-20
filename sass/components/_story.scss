@@ -12,6 +12,9 @@
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
+    @media screen and (max-width: 43.75em) {
+      grid-column: 1 / -1;
+    }
   }
 
   &__img--1 {
@@ -22,6 +25,9 @@
     z-index: 2;
     box-shadow: 0.5rem 0.1rem 2rem $light-text-color;
     transition: 0.5s ease-in-out;
+    @media screen and (max-width: 43.75em) {
+      grid-column: 2 / 6;
+    }
   }
   &__img--1:hover {
     transform: scale(1.1);
@@ -35,6 +41,9 @@
     z-index: 2;
     box-shadow: 0.5rem 0.1rem 2rem $light-text-color;
     transition: 0.5s ease-in-out;
+    @media screen and (max-width: 43.75em) {
+      grid-column: 4 / 7;
+    }
   }
   &__img--2:hover {
     transform: scale(1.1);
@@ -52,6 +61,9 @@
     display: grid;
     align-content: center;
     justify-items: start;
+    @media screen and (max-width: 43.75em) {
+      grid-column: 1 / -1;
+    }
   }
   &__text {
     font-size: 1.8rem;
