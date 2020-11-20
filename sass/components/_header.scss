@@ -1,4 +1,58 @@
 .header {
-  background-color: red;
+  background-color: $dark-font-color;
   grid-column: full-start / col-end 6;
+  background-image: linear-gradient(
+      rgba($dark-font-color, 0.9),
+      rgba($dark-font-color, 0.9)
+    ),
+    url(../img/carB.jpg);
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-columns: max-content;
+  grid-row-gap: 1.5rem;
+  padding: 8rem;
+  padding-top: 4rem;
+  justify-content: center;
+  h1 {
+    color: $light-text-color;
+  }
+
+  button {
+    align-self: start;
+    justify-self: start;
+  }
+
+  &__logo {
+    font-size: 3rem;
+    justify-self: center;
+    span {
+      color: $medium-text-color;
+    }
+  }
+  &__brands-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    grid-column-gap: 2rem;
+
+    font-size: 1.6rem;
+    &::before,
+    &::after {
+      content: "";
+      height: 0.1rem;
+      display: block;
+      background-color: currentColor;
+    }
+  }
+  &__brands-logos {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    img {
+      height: 6rem;
+      opacity: 0.8;
+    }
+  }
 }

@@ -1,4 +1,60 @@
-.top-cars {
-  background-color: green;
+.top__cars {
+  background-color: $dark-font-color;
   grid-column: col-end 6 / full-end;
+  display: grid;
+  grid-template-rows: 50%;
+  overflow: hidden;
+}
+.top__cars--container {
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+  }
+}
+
+.top__cars--container {
+  position: relative;
+}
+
+.top__cars--container:hover .overlay {
+  height: 50%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($dark-font-color, 0.8);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+
+  &__text {
+    color: $light-text-color;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .span {
+    font-size: 1.2rem;
+  }
+  button,
+  button:focus {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }

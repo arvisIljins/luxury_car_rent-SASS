@@ -7,14 +7,63 @@
       src="https://kit.fontawesome.com/2e2fd72eed.js"
       crossorigin="anonymous"
     ></script>
-    <title>Luxury Car rent</title>
+    <title>Luxury Car Rent</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
   </head>
   <body class="container">
-    <div class="sidebar">sidebar</div>
-    <header class="header">header</header>
-    <div class="top-cars">3 top Cars</div>
+    <div class="sidebar">
+      <div class="sidebar__container" id="navigationMenu">
+        <span class="navigation__icon" id="navIcon" onclick="changeIcon()">
+          &nbsp;
+        </span>
+        <ul class="mobile-menu" id="mobileMenu">
+          <li><a href="#" class="mobile-men-btn">Home</a></li>
+          <li><a href="#" class="mobile-men-btn">About</a></li>
+          <li><a href="#" class="mobile-men-btn">Testamental</a></li>
+          <li><a href="#" class="mobile-men-btn">Car List</a></li>
+          <li><a href="#" class="mobile-men-btn">Gallery</a></li>
+          <li>
+            <a onclick="bookNow()" href="#" class="mobile-men-btn">Book Now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <header class="header">
+      <h6 class="header__logo">LuxCar<span>.com</span></h6>
+      <h2 class="heading-2">Rent your dream ride</h2>
+      <h1 class="heading-1">Take luxury driving in new level</h1>
+      <button onclick="bookNow()" class="btn-primary">View our Cars</button>
+      <div class="header__brands-text">Out brands</div>
+      <div class="header__brands-logos">
+        <img src="img/logo1.png" alt="logo" />
+        <img src="img/logo2.png" alt="logo" />
+        <img src="img/logo3.png" alt="logo" />
+        <img src="img/logo4.png" alt="logo" />
+      </div>
+    </header>
+    <div class="top__cars">
+      <div class="top__cars--container">
+        <img src="img/car3.jpg" alt="logo" />
+        <div class="overlay">
+          <h3 class="overlay__text">
+            Cool Puma<br />
+            <span class="span">Top car in France</span>
+          </h3>
+          <button onclick="bookNow()" class="btn-primary">Book now</button>
+        </div>
+      </div>
+      <div class="top__cars--container">
+        <img src="img/car1.jpg" alt="logo" />
+        <div class="overlay">
+          <h3 class="overlay__text">
+            BMW M-series<br />
+            <span class="span">Most popular car in Germany</span>
+          </h3>
+          <button onclick="bookNow()" class="btn-primary">Book now</button>
+        </div>
+      </div>
+    </div>
     <section class="features">
       <div class="feature">
         <i class="fas fa-car feature__icon"></i>
@@ -89,7 +138,9 @@
         National Park. We followed the Highway 120 route through all the lush
         farms, Orchards, Vineyards and Ranches that were the San Joaquin County.
       </p>
-      <button class="btn-primary">Book your dream car now</button>
+      <button onclick="bookNow()" class="btn-primary">
+        Book your dream car now
+      </button>
     </div>
     <section class="cars">
       <div class="car">
@@ -115,7 +166,9 @@
           <i class="fas fa-euro-sign"></i>
           <p>150&euro; a day</p>
         </div>
-        <button class="btn-primary car__btn">Book Now</button>
+        <button onclick="bookNow()" class="btn-primary car__btn">
+          Book Now
+        </button>
       </div>
       <div class="car">
         <img src="img/car2.jpg" alt="car1" class="car__img" />
@@ -140,7 +193,9 @@
           <i class="fas fa-euro-sign"></i>
           <p>150&euro; a day</p>
         </div>
-        <button class="btn-primary car__btn">Book Now</button>
+        <button onclick="bookNow()" class="btn-primary car__btn">
+          Book Now
+        </button>
       </div>
       <div class="car">
         <img src="img/car3.jpg" alt="car1" class="car__img" />
@@ -165,7 +220,9 @@
           <i class="fas fa-euro-sign"></i>
           <p>150&euro; a day</p>
         </div>
-        <button class="btn-primary car__btn">Book Now</button>
+        <button onclick="bookNow()" class="btn-primary car__btn">
+          Book Now
+        </button>
       </div>
       <div class="car">
         <img src="img/car4.jpg" alt="car1" class="car__img" />
@@ -190,7 +247,9 @@
           <i class="fas fa-euro-sign"></i>
           <p>150&euro; a day</p>
         </div>
-        <button class="btn-primary car__btn">Book Now</button>
+        <button onclick="bookNow()" class="btn-primary car__btn">
+          Book Now
+        </button>
       </div>
       <div class="car">
         <img src="img/car5.jpg" alt="car1" class="car__img" />
@@ -215,7 +274,9 @@
           <i class="fas fa-euro-sign"></i>
           <p>150&euro; a day</p>
         </div>
-        <button class="btn-primary car__btn">Book Now</button>
+        <button onclick="bookNow()" class="btn-primary car__btn">
+          Book Now
+        </button>
       </div>
       <div class="car">
         <img src="img/car6.jpg" alt="car1" class="car__img" />
@@ -240,7 +301,9 @@
           <i class="fas fa-euro-sign"></i>
           <p>150&euro; a day</p>
         </div>
-        <button class="btn-primary car__btn">Book Now</button>
+        <button onclick="bookNow()" class="btn-primary car__btn">
+          Book Now
+        </button>
       </div>
     </section>
     <section class="gallery">
@@ -356,7 +419,9 @@
         <li class="nav__item"><a href="#" class="nav__link">Testamental</a></li>
         <li class="nav__item"><a href="#" class="nav__link">Car list</a></li>
         <li class="nav__item"><a href="#" class="nav__link">Gallery</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Book Now</a></li>
+        <li class="nav__item">
+          <a onclick="bookNow()" href="#" class="nav__link">Book Now</a>
+        </li>
       </ul>
       <p class="footer__legal">
         Copyright &#64; 2020 All Rights Reserved By yourgurunet.com
@@ -368,6 +433,13 @@
       <div class="modal__image--container">
         <span class="modal__close">&times;</span>
         <img class="modal__content" id="expandedImg" />
+      </div>
+    </div>
+    <!--Book Now modal------------------------------------------->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <h1 class="heading-2">Thanks for booking your dream car!</h1>
+        <button class="btn-primary close">Back to homepage</button>
       </div>
     </div>
   </body>

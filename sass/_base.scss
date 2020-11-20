@@ -60,6 +60,14 @@ body {
   text-transform: uppercase;
   color: $medium-text-color;
 }
+.heading-1 {
+  font-size: 6rem;
+  line-height: 1;
+  font-family: "Teko", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $medium-text-color;
+}
 
 // Buttons
 .btn-primary {

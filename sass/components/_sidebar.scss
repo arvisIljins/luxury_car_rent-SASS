@@ -5,3 +5,153 @@
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1; //start from 1 end as last
 }
+
+.sidebar__container {
+  background-color: $medium-text-color;
+  width: 8rem;
+  height: 80vh;
+  position: fixed;
+}
+
+/*Open icon*/
+.navigation__icon {
+  cursor: pointer;
+  position: relative;
+  margin: 4rem auto;
+  width: 3.2rem;
+  height: 0.4rem;
+  background-color: $dark-font-color;
+  display: block;
+  z-index: 99;
+}
+
+.navigation__icon::before,
+.navigation__icon::after {
+  cursor: pointer;
+  width: 3.2rem;
+  height: 0.4rem;
+  background-color: $dark-font-color;
+  display: inline-block;
+}
+.navigation__icon::before,
+.navigation__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+.navigation__icon::before {
+  top: -1rem;
+}
+.navigation__icon::after {
+  top: 1rem;
+}
+
+.navigation__icon:hover {
+  background-color: $medium-font-color;
+}
+.navigation__icon:hover::before {
+  top: -1.2rem;
+  background-color: $medium-font-color;
+}
+
+.navigation__icon:hover::after {
+  top: 1.2rem;
+  background-color: $medium-font-color;
+}
+
+/* Close Icon */
+.navigation__icon--close {
+  cursor: pointer;
+  position: relative;
+  margin: 4rem auto;
+  width: 3.2rem;
+  height: 0.4rem;
+  background-color: transparent;
+  display: block;
+}
+.navigation__icon--close::before,
+.navigation__icon--close::after {
+  cursor: pointer;
+  width: 3.2rem;
+  height: 0.4rem;
+  background-color: $dark-font-color;
+  display: inline-block;
+}
+.navigation__icon--close::before,
+.navigation__icon--close::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+.navigation__icon--close::before {
+  transform: rotate(135deg);
+  top: 0rem;
+}
+.navigation__icon--close::after {
+  transform: rotate(-135deg);
+  top: 0rem;
+}
+
+.navigation__icon--close:hover::before {
+  background-color: $medium-font-color;
+}
+
+.navigation__icon--close:hover::after {
+  background-color: $medium-font-color;
+}
+
+.nav_menu-mobile {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: $medium-text-color;
+  animation-name: showNavigation;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+}
+.mobile-menu {
+  display: none;
+}
+.mobile-menu li {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.mobile-menu li:first-child {
+  padding-top: 6rem;
+}
+.mobile-menu a {
+  color: $dark-font-color;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 108.95%;
+  animation-name: showList;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+}
+.mobile-menu a:hover {
+  color: $medium-font-color;
+}
+@keyframes showNavigation {
+  0% {
+    width: 8rem;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes showList {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
